@@ -1,6 +1,6 @@
 {
     "name": "kawsarahmad/valen",
-    "description": "automated validation for laravel application",
+    "description": "Automated validation for laravel application",
     "type": "library",
     "license": "MIT",
     "autoload": {

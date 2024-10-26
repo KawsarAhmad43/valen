@@ -9,6 +9,7 @@ class Valen
     public function validate(array $input)
     {
         $rules = [];
+        $errorMessages = [];
 
         foreach ($input as $key => $value) {
             $rules[$key] = $this->parseValidationRules($key);
@@ -17,7 +18,10 @@ class Valen
         $validator = Validator::make($input, $rules);
 
         if ($validator->fails()) {
-            return $validator->errors();
+            foreach ($validator->errors()->messages() as $field => $messages) {
+                $errorMessages[$field . '_error'] = $messages; 
+            }
+            return $errorMessages; 
         }
 
         return true;
@@ -40,9 +44,10 @@ class Valen
             } elseif (str_starts_with($segment, 'email')) {
                 $parsedRules[] = 'email';
             }
-            // Add additional parsing logic for other rules (image types, unique, etc.)
+           
         }
 
         return implode('|', $parsedRules);
     }
+
 }
