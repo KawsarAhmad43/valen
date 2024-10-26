@@ -1,0 +1,30 @@
+{
+    "name": "kawsarahmad/valen",
+    "description": "automated validation for laravel application",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kawsarahmad\\Valen\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KawsarAhmad43"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "^11.29"
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "Kawsarahmad\\Valen\\Providers\\ValenServiceProvider"
+        ],
+        "aliases": {
+            "Valen": "Kawsarahmad\\Valen\\Facades\\Valen"
+        }
+    }
+}
+}
