@@ -1,5 +1,4 @@
 <?php
-
 namespace Kawsarahmad\Valen;
 
 use Illuminate\Support\Facades\Validator;
@@ -32,8 +31,7 @@ class Valen
         $segments = explode('-', $key);
         $parsedRules = [];
 
-        // Determine the main type of validation based on the prefix
-        $fieldType = array_shift($segments); // e.g., "name", "price", "image", etc.
+        $fieldType = array_shift($segments); 
 
         foreach ($segments as $segment) {
             switch ($segment) {
