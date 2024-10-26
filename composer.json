@@ -1,6 +1,6 @@
 {
     "name": "kawsarahmad/valen",
-    "description": "Automated validation for laravel application",
+    "description": "Automated validation for Laravel application",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -15,16 +15,16 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "illuminate/support": "^11.29"
+        "illuminate/support": "^11.0" 
     },
     "extra": {
-    "laravel": {
-        "providers": [
-            "Kawsarahmad\\Valen\\Providers\\ValenServiceProvider"
-        ],
-        "aliases": {
-            "Valen": "Kawsarahmad\\Valen\\Facades\\Valen"
+        "laravel": {
+            "providers": [
+                "Kawsarahmad\\Valen\\Providers\\ValenServiceProvider"
+            ],
+            "aliases": {
+                "Valen": "Kawsarahmad\\Valen\\Facades\\Valen"
+            }
         }
     }
-}
 }
